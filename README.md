@@ -1,3 +1,5 @@
+![Yamdb workflow](https://github.com/semenvanyushin/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 ### Описание:
 
 Проект **api_yamdb** это бекэнд для сайта-агрегатора рецензий **YaMDb**, на котором вы можете посмотреть рейтинг интересующего вас произведения, написать о нем отзыв и поставить оценку, также вы можете комментировать чужие отзывы. 
@@ -16,17 +18,19 @@
 
   и еще много всего.
 
-  Полный список доступных эндпоинтов можно посмотреть здесь http://127.0.0.1:8000/redoc/, эта ссылка будет доступна после того как вы запустите проект, ниже описание того как это сделать. 
-
-  *Замечание:* Для работы **redoc** необходимо в *settings.py* установить *DEBUG=True*
+Стек:
+- Django
+- DRF
+- djangorestframework-simplejwt
+- psycopg2-binary
+- PyJWT
 
 ### Как запустить проект:
 
 Клонируем репозиторий и переходим в него:
 ```bash
 git clone https://github.com/semenvanyushin/infra_sp2.git
-cd infra_sp2
-cd api_yamdb
+cd yamdb_final
 ```
 
 Создаем и активируем виртуальное окружение:
@@ -88,30 +92,3 @@ POSTGRES_PASSWORD=postgres
 DB_HOST=db
 DB_PORT=5432
 ```
-
-#### Получить токен
-
-```
-POST http://127.0.0.1:8000/api/v1/auth/token/
-Content-Type: application/json
-
-{
-    "username": "alena",
-    "confirmation_code": "64u-188bc42c1126464cff29"
-}
-```
-
-#### Добавить произведение( доступно только администраторам сайта)
-
-```
-POST http://127.0.0.1:8000/api/v1/titles/
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY1NDk1NjUxLCJpYXQiOjE2NjU0MDkyNTEsImp0aSI6IjkzMDI4Y2U2Yzc4MzQ4ZmRiMGQzYjAzMzdhOGU1NDhkIiwidXNlcl9pZCI6Mn0.Csq5sVXLhJTbYsZNdU7g5r2bRhsLXwtKchNUAmyi6uE
-```
-
-#### Посмотреть список всех произведений
-
-```
-http://127.0.0.1:8000/api/v1/titles/ 
-```
-![example workflow](https://github.com/semenvanyushin/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
