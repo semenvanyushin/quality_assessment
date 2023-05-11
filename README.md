@@ -1,10 +1,10 @@
-![Yamdb workflow](https://github.com/semenvanyushin/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![Yamdb workflow](https://github.com/semenvanyushin/quality_assessment/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ### Описание:
 
-Проект **api_yamdb** это бекэнд для сайта-агрегатора рецензий **YaMDb**, на котором вы можете посмотреть рейтинг интересующего вас произведения, написать о нем отзыв и поставить оценку, также вы можете комментировать чужие отзывы. 
+Проект **quality_assessment** это бекэнд для сайта-агрегатора рецензий, на котором вы можете посмотреть рейтинг интересующего вас произведения, написать о нем отзыв и поставить оценку, также вы можете комментировать чужие отзывы. 
 
- **api_yamdb** дает возможность передавать данные с помощью **REST API** интерфейса, доступные действия:
+ **quality_assessment** дает возможность передавать данные с помощью **REST API** интерфейса, доступные действия:
 
 - регистрация пользоватея
 
@@ -29,7 +29,7 @@
 
 Клонируем репозиторий и переходим в него:
 ```bash
-git clone https://github.com/semenvanyushin/infra_sp2.git
+git clone https://github.com/semenvanyushin/quality_assessment.git
 cd yamdb_final
 ```
 
